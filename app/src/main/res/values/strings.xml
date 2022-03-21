@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medicines</string>
+    <string name="retail">单品零售</string>
+    <string name="prescription">处方结算</string>
+    <string name="prescription_list">处方清单</string>
+    <string name="settings">应用设置</string>
+    <string name="pay">结算</string>
+    <string name="good_night">下午好!</string>
+    <string name="atomize">雾化登记</string>
+    <string name="product">商品仓库</string>
+</resources>

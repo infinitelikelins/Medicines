@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.infinite.pay.medicines"
+        minSdk 21
+        targetSdk 31
+        versionCode 10000
+        versionName "1.0.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation libs.bundles.kotlin
+    implementation libs.bundles.androidx
+    implementation libs.bundles.lifecycle
+    implementation libs.bundles.google
+    implementation libs.bundles.tencent
+    implementation libs.bundles.github
+    implementation libs.logger
+    implementation libs.kprogresshud
+    implementation libs.vega
+    implementation libs.switcher
+
+    kapt libs.glide.compiler
+    kapt libs.annotation
+    kapt libs.room.compiler
+
+}

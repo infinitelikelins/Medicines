@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Medicines" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <color name="drawable_account_color">@color/gray_3</color>
+    <color name="drawable_settings_color">@color/gray_3</color>
+    <color name="drawable_article_color">@color/gray_3</color>
+
+    <color name="text_color_headline">#FFFFFFFF</color>
+    <color name="text_color_title">#D9FFFFFF</color>
+    <color name="text_color_primary">#A6FFFFFF</color>
+    <color name="text_color_secondary">#73FFFFFF</color>
+    <color name="text_color_disable">#4FFFFFFF</color>
+    <color name="text_color_border">#26FFFFFF</color>
+    <color name="text_color_dividers">#0FFFFFFF</color>
+    <color name="text_color_background">#0AFFFFFF</color>
+    <color name="text_color_table_header">#05FFFFFF</color>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.254" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.3765" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ic_baseline_local_police_8.xml" value="0.363" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ic_baseline_military_tech_8.xml" value="0.363" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ic_launcher_background.xml" value="0.254" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ripple_gray_5.xml" value="0.268" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ripple_rectangle_blue_16.xml" value="0.363" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/ripple_shape_rec_blue_12.xml" value="0.268" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/shape_rec_blue_12.xml" value="0.268" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/shape_rectangle_dust_red_16.xml" value="0.352" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/shape_rectangle_white_24.xml" value="0.314" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/shape_rectangle_white_48.xml" value="0.352" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/drawable/shape_ring_blue_24.xml" value="0.219" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land-v23/fragment_prescription.xml" value="0.6144901610017889" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/activity_main.xml" value="0.11927083333333334" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/activity_retail.xml" value="0.28178835110746514" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_atomize.xml" value="0.28178835110746514" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_module.xml" value="0.12942708333333333" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_prescription.xml" value="0.20193470374848851" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_product.xml" value="0.13151041666666666" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_retail.xml" value="0.28178835110746514" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_settings.xml" value="0.28178835110746514" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/fragment_stock.xml" value="0.13151041666666666" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/item_medicine_count.xml" value="0.16927083333333334" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/item_medicines.xml" value="0.14713541666666666" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/item_prescription.xml" value="0.28178835110746514" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/item_prescription_medicines.xml" value="0.10911458333333333" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/item_retail.xml" value="0.2078125" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-land/popup_item_count.xml" value="0.14713541666666666" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout-sw600dp/fragment_product.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/activity_main.xml" value="0.1675" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/activity_retail.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_module.xml" value="0.13875" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_prescription.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_product.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_retail.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_settings.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/fragment_stock.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/item_medicines.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/item_prescription.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/item_prescription_medicines.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/layout/item_retail.xml" value="0.17890625" />
+        <entry key="..\:/infinite/Medicines/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.157" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

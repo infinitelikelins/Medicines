@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/moduleFragment">
+
+    <fragment
+        android:id="@+id/moduleFragment"
+        android:name="com.infinite.pay.medicines.fragment.ModuleFragment"
+        tools:layout="@layout/fragment_module">
+
+        <action
+            android:id="@+id/action_moduleFragment_to_retailFragment"
+            app:destination="@id/retailFragment"
+            app:launchSingleTop="true" />
+
+        <action
+            android:id="@+id/action_moduleFragment_to_prescriptionFragment"
+            app:destination="@id/prescriptionFragment"
+            app:launchSingleTop="true" />
+
+        <action
+            android:id="@+id/action_moduleFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:launchSingleTop="true" />
+
+        <action
+            android:id="@+id/action_moduleFragment_to_stockFragment"
+            app:destination="@id/stockFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_moduleFragment_to_atomizeFragment"
+            app:destination="@id/atomizeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/retailFragment"
+        android:name="com.infinite.pay.medicines.fragment.RetailFragment"
+        tools:layout="@layout/fragment_retail" />
+
+    <fragment
+        android:id="@+id/prescriptionFragment"
+        android:name="com.infinite.pay.medicines.fragment.PrescriptionFragment"
+        tools:layout="@layout/fragment_prescription" />
+
+    <fragment
+        android:id="@+id/stockFragment"
+        android:name="com.infinite.pay.medicines.fragment.StockFragment"
+        tools:layout="@layout/fragment_stock" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.infinite.pay.medicines.fragment.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/atomizeFragment"
+        android:name="com.infinite.pay.medicines.fragment.AtomizeFragment"
+        tools:layout="@layout/fragment_atomize" />
+
+</navigation>

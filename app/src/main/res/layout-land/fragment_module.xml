@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.circle"
+            app:srcCompat="@drawable/ic_module_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/good_night"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="64sp"
+            app:fontFamily="sans-serif-black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/module_prescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/prescription"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_module_prescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/module_retail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/module_retail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/retail"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_module_retail"
+            app:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/module_atomize"
+            app:layout_constraintStart_toEndOf="@id/module_prescription"
+            app:layout_constraintTop_toBottomOf="@id/greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/module_atomize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/atomize"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_module_atomize"
+            app:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/module_stock"
+            app:layout_constraintStart_toEndOf="@id/module_retail"
+            app:layout_constraintTop_toBottomOf="@id/greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/module_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/product"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_module_product"
+            app:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/module_setting"
+            app:layout_constraintStart_toEndOf="@id/module_atomize"
+            app:layout_constraintTop_toBottomOf="@id/greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/module_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_module_setting"
+            app:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/module_stock"
+            app:layout_constraintTop_toBottomOf="@id/greeting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
