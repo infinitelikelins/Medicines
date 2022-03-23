@@ -49,6 +49,7 @@ dependencies {
     implementation libs.vega
     implementation libs.switcher
 
+    implementation "androidx.metrics:metrics-performance:1.0.0-alpha01"
     kapt libs.glide.compiler
     kapt libs.annotation
     kapt libs.room.compiler

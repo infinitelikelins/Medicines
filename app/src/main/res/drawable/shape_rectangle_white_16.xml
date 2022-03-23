@@ -4,8 +4,8 @@
 
     <corners android:radius="16dp" />
 
-    <gradient android:centerColor="@color/colorWhite"
-        android:startColor="@color/colorWhite"
-        android:endColor="@color/colorWhite" />
+    <gradient android:centerColor="@color/background_color_popup"
+        android:startColor="@color/background_color_popup"
+        android:endColor="@color/background_color_popup" />
 
 </shape>

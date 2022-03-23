@@ -19,10 +19,10 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <color name="drawable_account_color">@color/gray_3</color>
-    <color name="drawable_settings_color">@color/gray_3</color>
-    <color name="drawable_article_color">@color/gray_3</color>
+    <color name="drawable_color_gray">@color/gray_1</color>
 
+    <color name="background_color_popup">@color/gray_11</color>
+    <color name="background_color_card_geek_blue">@color/geek_blue_6</color>
     <color name="text_color_headline">#FFFFFFFF</color>
     <color name="text_color_title">#D9FFFFFF</color>
     <color name="text_color_primary">#A6FFFFFF</color>

@@ -14,7 +14,6 @@ import com.infinite.pay.medicines.adapter.PrescriptionItemAdapter
 import com.infinite.pay.medicines.data.entity.Goods
 import com.infinite.pay.medicines.data.entity.Medicine
 import com.infinite.pay.medicines.databinding.FragmentPrescriptionBinding
-import com.infinite.pay.medicines.enums.UnitEnum
 import com.infinite.pay.medicines.popup.ItemCountPopup
 import es.dmoral.toasty.Toasty
 
@@ -50,16 +49,19 @@ class PrescriptionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         bindView.prescriptionItemList.adapter = prescriptionItemAdapter
+        // RecyclerView左右滑动删除
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
             ItemTouchHelper.UP or ItemTouchHelper.DOWN,
             ItemTouchHelper.RIGHT or ItemTouchHelper.LEFT
         ) {
+            // 上下移动
             override fun onMove(
                 recyclerView: RecyclerView,
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean = true
 
+            // 左右滑动
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 prescriptionItemAdapter.removeAt(viewHolder.bindingAdapterPosition)
             }
@@ -68,7 +70,7 @@ class PrescriptionFragment : Fragment() {
         bindView.prescriptionMedicines.adapter = medicineItemAdapter
 
         medicineItemAdapter.addData(MutableList(80) {
-            Medicine(it + 1, "商品名称", units = UnitEnum.BOTTLE)
+            Medicine(it + 1, "商品名称")
         })
 
         medicineItemAdapter.setOnItemClickListener { _, _, position ->

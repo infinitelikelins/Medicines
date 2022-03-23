@@ -24,9 +24,10 @@
         <item name="cornerSize">50%</item>
     </style>
 
-    <color name="drawable_account_color">@color/gray_8</color>
-    <color name="drawable_settings_color">@color/gray_8</color>
-    <color name="drawable_article_color">@color/gray_8</color>
+    <color name="drawable_color_gray">@color/gray_16</color>
+
+    <color name="background_color_popup">@color/colorWhite</color>
+    <color name="background_color_card_geek_blue">@color/geek_blue_1</color>
 
     <color name="text_color_headline">#FF000000</color>
     <color name="text_color_title">#D9000000</color>

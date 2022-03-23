@@ -32,7 +32,7 @@ class ModuleFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.module_atomize -> {findNavController().navigate(ModuleFragmentDirections.actionModuleFragmentToAtomizeFragment())}
+            R.id.module_atomize -> findNavController().navigate(ModuleFragmentDirections.actionModuleFragmentToAtomizeFragment())
             R.id.module_prescription -> findNavController().navigate(ModuleFragmentDirections.actionModuleFragmentToPrescriptionFragment())
             R.id.module_retail -> findNavController().navigate(ModuleFragmentDirections.actionModuleFragmentToRetailFragment())
             R.id.module_stock -> findNavController().navigate(ModuleFragmentDirections.actionModuleFragmentToStockFragment())

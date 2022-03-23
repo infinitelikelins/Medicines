@@ -19,6 +19,7 @@ data class Medicine(
     var barcode: String? = null, // 条形码
     var sale: Double = 10.0, // 售价
     var units: UnitEnum = UnitEnum.GRAIN, // 计量单位
+    var metering : Double = 1.0, // 计量大小
     var mode: SaleModeEnum = SaleModeEnum.RETAIL, // 模式
 )
 
