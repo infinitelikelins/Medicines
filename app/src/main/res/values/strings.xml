@@ -11,4 +11,5 @@
     <string name="atomize">雾化登记</string>
     <string name="product">商品仓库</string>
     <string name="quantity">商品数量</string>
+    <string name="total_money">结算金额</string>
 </resources>

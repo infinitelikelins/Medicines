@@ -15,7 +15,7 @@ import com.infinite.pay.medicines.data.entity.Goods
 import com.infinite.pay.medicines.data.entity.Medicine
 import com.infinite.pay.medicines.databinding.FragmentPrescriptionBinding
 import com.infinite.pay.medicines.popup.ItemCountPopup
-import es.dmoral.toasty.Toasty
+import com.infinite.pay.medicines.popup.PaymentPopup
 
 /**
  * 处方
@@ -23,16 +23,19 @@ import es.dmoral.toasty.Toasty
 class PrescriptionFragment : Fragment() {
 
     private lateinit var bindView: FragmentPrescriptionBinding
+
     private val prescriptionItemAdapter: PrescriptionItemAdapter by lazy {
         PrescriptionItemAdapter().apply {
             addChildClickViewIds(R.id.count)
-            setOnItemChildClickListener { _, _, position ->
-                ItemCountPopup(this@PrescriptionFragment.requireContext()).apply {
-                    popupWithClick = {
-                        getItem(position).count = it
-                        notifyItemChanged(position)
-                    }
-                }.showPopupWindow()
+            setOnItemChildClickListener { _, childView, position ->
+                if (childView.id == R.id.count) {
+                    ItemCountPopup(this@PrescriptionFragment.requireContext()).apply {
+                        popupWithClick = {
+                            getItem(position).count = it
+                            notifyItemChanged(position)
+                        }
+                    }.showPopupWindow()
+                }
             }
         }
     }
@@ -80,9 +83,12 @@ class PrescriptionFragment : Fragment() {
         bindView.clear.setOnClickListener { prescriptionItemAdapter.setNewInstance(mutableListOf()) }
         bindView.close.setOnClickListener { findNavController().navigateUp() }
         bindView.checkout.setOnClickListener {
-            var price = 0.0
-            prescriptionItemAdapter.data.forEach { price += it.total() }
-            Toasty.success(requireContext(), "$price").show()
+            val price = prescriptionItemAdapter.data.sumOf { it.total() }
+            PaymentPopup(requireContext(), price).apply {
+                popupWithCompleted = {
+                    prescriptionItemAdapter.setNewInstance(mutableListOf())
+                }
+            }.showPopupWindow()
         }
     }
 

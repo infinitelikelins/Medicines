@@ -23,11 +23,10 @@ abstract class AbsBasePopup(context: Context?) : BasePopupWindow(context) {
             .withAlpha(AlphaConfig.OUT.duration(300L))
             .toDismiss()
 
-    protected fun withClick(@IdRes id: Int, onClickListener: View.OnClickListener?) {
-        val view = findViewById<View>(id)
-        view?.setOnClickListener { v: View? ->
+    protected fun withClick(@IdRes id: Int, onClickListener: View.OnClickListener? , dismissEnable : Boolean = true) {
+        findViewById<View>(id)?.setOnClickListener { v: View? ->
             onClickListener?.onClick(v)
-            dismiss(true)
+            if (dismissEnable) dismiss(true)
         }
     }
 

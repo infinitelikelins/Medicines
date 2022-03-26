@@ -14,19 +14,4 @@ class MainApp : Application() {
         MultiDex.install(base)
     }
 
-    override fun onCreate() {
-        super.onCreate()
-        Logger.addLogAdapter(object : AndroidLogAdapter(
-            PrettyFormatStrategy.newBuilder()
-                .showThreadInfo(true)
-                .methodCount(5)
-                .tag("LOGGER")
-                .build()
-        ) {
-            override fun isLoggable(priority: Int, tag: String?): Boolean {
-                return BuildConfig.DEBUG
-            }
-        })
-    }
-
 }
