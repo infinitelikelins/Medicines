@@ -8,11 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.transition.platform.Hold
+import com.google.android.material.transition.platform.MaterialArcMotion
+import com.google.android.material.transition.platform.MaterialContainerTransform
+import com.google.android.material.transition.platform.MaterialElevationScale
 import com.infinite.pay.medicines.R
 import com.infinite.pay.medicines.adapter.MedicineItemAdapter
 import com.infinite.pay.medicines.adapter.PrescriptionItemAdapter
 import com.infinite.pay.medicines.data.entity.Goods
-import com.infinite.pay.medicines.data.entity.Medicine
 import com.infinite.pay.medicines.databinding.FragmentPrescriptionBinding
 import com.infinite.pay.medicines.popup.ItemCountPopup
 import com.infinite.pay.medicines.popup.PaymentPopup
@@ -40,6 +43,19 @@ class PrescriptionFragment : Fragment() {
         }
     }
     private val medicineItemAdapter: MedicineItemAdapter by lazy { MedicineItemAdapter() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        exitTransition = MaterialElevationScale(false)
+        reenterTransition = Hold()
+        sharedElementEnterTransition = MaterialContainerTransform().apply {
+            duration = 300
+            pathMotion = MaterialArcMotion()
+            fadeMode = MaterialContainerTransform.FADE_MODE_THROUGH
+            fadeProgressThresholds = MaterialContainerTransform.ProgressThresholds(0.6f,0.9f)
+            transitionDirection = MaterialContainerTransform.TRANSITION_DIRECTION_AUTO
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,10 +87,6 @@ class PrescriptionFragment : Fragment() {
 
         }).attachToRecyclerView(bindView.prescriptionItemList)
         bindView.prescriptionMedicines.adapter = medicineItemAdapter
-
-        medicineItemAdapter.addData(MutableList(80) {
-            Medicine(it + 1, "商品名称")
-        })
 
         medicineItemAdapter.setOnItemClickListener { _, _, position ->
             prescriptionItemAdapter.addData(0, Goods(medicineItemAdapter.getItem(position)))

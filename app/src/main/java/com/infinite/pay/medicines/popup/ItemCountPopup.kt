@@ -24,7 +24,7 @@ class ItemCountPopup(context: Context) : AbsBasePopup(context) {
                     dismiss(true)
                 }
             }
-        withClick(R.id.close, null)
+        withClick(R.id.close,true)
     }
 
     override fun onDestroy() {

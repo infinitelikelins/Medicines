@@ -17,9 +17,9 @@ class PaymentPopup(context: Context, private val totalPay: Double = 0.0) : AbsBa
     override fun onViewCreated(contentView: View) {
         bindView = PopupPaymentBinding.bind(contentView)
         bindView.paymentTotal.text = "$totalPay"
-        withClick(R.id.pay_completed,{
+        withClick(R.id.pay_completed) {
             popupWithCompleted?.invoke()
-        })
+        }
     }
 
     override fun onDestroy() {

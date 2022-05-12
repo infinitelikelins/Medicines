@@ -9,7 +9,8 @@ import com.infinite.pay.medicines.data.entity.Medicine
 /**
  * 库存处方药品列表
  */
-class MedicineItemAdapter : BaseQuickAdapter<Medicine, BaseViewHolder>(R.layout.item_medicines) {
+class MedicineItemAdapter : BaseQuickAdapter<Medicine, BaseViewHolder>
+    (R.layout.item_medicines, MutableList(110) { Medicine(it + 1, "商品名称") }) {
 
     init {
         setDiffCallback(object : DiffUtil.ItemCallback<Medicine>() {
